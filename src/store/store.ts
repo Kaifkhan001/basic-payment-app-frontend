@@ -11,7 +11,7 @@ export const fetchData = selector({
     get: async() => {
         try {
             const response = await axios.get(
-              "/api/v1/users/userAuth"
+              "https://basic-payment-app-01-1.onrender.com/api/v1/users/userAuth"
             );
         console.log("store value:- ", response.data)
         return response.data.success;

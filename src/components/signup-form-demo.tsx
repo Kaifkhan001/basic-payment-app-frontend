@@ -36,7 +36,12 @@ export default function SignupFormDemo({isSignUp}: any) {
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-      const response = await axios.post(`/api/v1/users/${isSignUp? "signup" : "signin"}`, user);
+      const response = await axios.post(
+        `https://basic-payment-app-01-1.onrender.com/api/v1/users/${
+          isSignUp ? "signup" : "signin"
+        }`,
+        user
+      );
       if(!response.data.success){
         console.log("Error in response", response.data);
         toast.error("Something went wrong");

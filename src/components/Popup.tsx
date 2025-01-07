@@ -36,7 +36,14 @@ const Popup = () => {
   const handleClickToSend = async() => {
     setIsProcessing(true);
       try {
-         const response = await axios.post('/api/v1/users/transferMoney',{sendTo: sendToVal, sendFrom: neededData.sendFrom, amount: neededData.amount} );
+         const response = await axios.post(
+           "https://basic-payment-app-01-1.onrender.com/api/v1/users/transferMoney",
+           {
+             sendTo: sendToVal,
+             sendFrom: neededData.sendFrom,
+             amount: neededData.amount,
+           }
+         );
          if(response.data.success){
             toast.success("You have successfully sent the money");
             const updateAccount = response.data.sendFromUser[0].balance;

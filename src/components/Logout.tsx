@@ -13,7 +13,9 @@ const Logout = () => {
 
     const handleLogout = async () => {
      try {
-        const response = await axios.post("/api/v1/users/logout");
+        const response = await axios.post(
+          "https://basic-payment-app-01-1.onrender.com/api/v1/users/logout"
+        );
         return response.data;
      } catch (error) {
         console.log("error loggin out the user!!", error);

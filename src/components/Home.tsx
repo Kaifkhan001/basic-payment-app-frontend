@@ -19,7 +19,10 @@ const HomePage = () => {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.post("/api/v1/users/findUser",{findUsername});
+      const res = await axios.post(
+        "https://basic-payment-app-01-1.onrender.com/api/v1/users/findUser",
+        { findUsername }
+      );
       setSearchDataVal(res.data);
       console.log("balance data in submit function :- ", res.data.accountInfo.balance);
       if(res.data.success){
