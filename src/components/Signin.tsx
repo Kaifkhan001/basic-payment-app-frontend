@@ -1,4 +1,3 @@
-import React from 'react'
 import SignupFormDemo from './signup-form-demo'
 
 const Signin = () => {

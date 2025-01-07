@@ -7,7 +7,7 @@ import Landing from './components/Landing';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import { RecoilRoot } from 'recoil';
-import Logouta from './components/Logout';
+import Logout from './components/Logout';
 
 function App() {
 
